@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="dsJndiTemplate" class="org.springframework.jndi.JndiTemplate">
+        <property name="environment">
+            <props>
+                <prop key="java.naming.provider.url">t3://localhost:6019</prop>
+                <prop key="java.naming.factory.initial">weblogic.jndi.WLInitialContextFactory</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="commonDataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+        <property name="jndiName">
+            <value>jdbc/pool/ORDBTRSCoreDSM</value>
+        </property>
+        <property name="resourceRef">
+            <value>true</value>
+        </property>
+        <property name="jndiTemplate">
+            <ref local="dsJndiTemplate" />
+        </property>
+    </bean>
+
+    <bean id="trsDataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+        <property name="jndiName">
+            <value>jdbc/pool/ORDBTRSCoreDSM</value>
+        </property>
+        <property name="resourceRef">
+            <value>true</value>
+        </property>
+        <property name="jndiTemplate">
+            <ref local="dsJndiTemplate" />
+        </property>
+    </bean>
+    
+    <bean id="ciduserDataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+        <property name="jndiName">
+            <value>jdbc/pool/ORDBCIDCoreDSM</value>
+        </property>
+        <property name="resourceRef">
+            <value>true</value>
+        </property>
+        <property name="jndiTemplate">
+            <ref local="dsJndiTemplate" />
+        </property>
+    </bean>
+    
+    
+    <bean id="chipapplyDataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+        <property name="jndiName">
+            <value>jdbc/pool/ORDBCHIPAPPLYCoreDSM</value>
+        </property>
+        <property name="resourceRef">
+            <value>true</value>
+        </property>
+        <property name="jndiTemplate">
+            <ref local="dsJndiTemplate" />
+        </property>
+    </bean>
+</beans>

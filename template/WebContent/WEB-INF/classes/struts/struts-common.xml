@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<package namespace="/common" name="common"  extends="struts-default, json-default">
+		<default-interceptor-ref name="defaultStack" />
+		
+		<!-- <action name="initQueryPeriPage" class="org.cic.template.web.action.CommonCodeAction" method="initQueryPeriPage">
+            <result name="success">/WEB-INF/jsp/common/common_query_periodical.jsp</result>
+        </action>
+        <action name="queryPeri" class="org.cic.template.web.action.CommonCodeAction" method="queryPeri">
+            <result name="success">/WEB-INF/jsp/common/common_query_periodical.jsp</result>
+        </action> -->
+
+        
+	</package>
+
+	
+</struts>

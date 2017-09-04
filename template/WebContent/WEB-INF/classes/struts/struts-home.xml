@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    
+    <!-- 登入  -->
+	<package name="home" namespace="/home" extends="struts-authorization, json-default">
+		<default-interceptor-ref name="authorizationStack" />
+
+        <global-exception-mappings>
+            <exception-mapping exception="java.lang.Exception" result="error" />
+        </global-exception-mappings>
+        
+        <action name="init">
+            <result name="success">/WEB-INF/jsp/home/home_main.jsp</result>
+        </action>
+        
+	</package>
+	
+</struts>

@@ -1,0 +1,172 @@
+@CHARSET "UTF-8";
+body{
+    font-size: 14px;
+
+}
+
+.menutb {background-color:#FFFFFF; font-size:10px;}
+/* .menutb a:link{text-decoration:none; font-size:8pt; line-height: 12pt;} */
+.menutb td {
+     /*line-height:8px;
+     height: 8px; */
+     font-weight:normal;
+     color:#003366;
+     background-color:#FFFFFF;
+     letter-spacing:1px;}
+    .menutb a {text-decoration: none;}
+    .menutb a:link{text-decoration:none; font-size:10pt; line-height: 12pt}
+    .menutb a:visited {color:#0000CC; font-size:10pt;}
+    .menutb a:hover {color:#0000ff; font-size:10pt;}
+    .menutb input{ letter-spacing:1px; padding:2px 2px 0 2px;
+}
+
+/* =============== serachtb start =============== */
+
+.serachtb {background-color:#FFFFFF; font-size:15px;}
+.serachtb caption{height:30px; padding:10px 0 0 0;color:#FF0000;}
+.serachtb th {padding:2px;font-weight:bold; line-height:20px;color:#fff; 
+	background-color:#6699FF;letter-spacing:1px;}
+.serachtb td {
+	background-color:#FFFFFF; color:#000000; border:0 ;padding:5px; font-size:15px;
+	border-left:1px solid #DADADA;
+	border-top:1px solid #DADADA;
+	border-right:1px solid #DADADA;
+	border-bottom:1px solid #DADADA;
+}
+/*必填欄位*/
+.serachtb .reqfield {color:#FF0000 }
+
+.serachtb th.title { background-color:#0033CC; color:#33FFFF;}
+.serachtb input{ letter-spacing:1px;}
+
+/* =============== serachtb end ================= */
+
+
+/* =============== gridtb start ================= */			
+/* CCCCCC */
+.gridtb {background-color:#cce6ff; font-size:13px; }
+.gridtb th {
+	border-left:2px solid #DADADA;
+	border-top:2px solid #DADADA;
+	border-right:2px solid #737373;
+	border-bottom:2px solid #737373;
+	padding:2px 0 0 0;
+	font-weight:normal; line-height:20px;
+	color:#000; background-color:#cce6ff;letter-spacing:1px;
+}
+
+.gridtb th{ 
+	height: 20px; 
+	margin: 0px; 
+	padding: 0px; 
+}
+
+.gridtb th a { 
+	display: block; 
+	padding:2px 0 0 0;
+	height: 20px; 
+	color:#000;text-decoration:none;
+}
+ 
+.gridtb th a:link {color:#000; text-decoration: none;}
+.gridtb th a:visited {color:#000; text-decoration: none;}
+.gridtb th a:hover { 
+	background: #2E3192;
+	color:#00FFFF; text-decoration:none;
+}
+ 
+.gridtb th.title { /* 6699FF */
+	background-color:#6699FF; color:#000000; border:0 ;padding:5px; font-size:15px;
+	border-left:2px solid #DADADA;
+	border-top:2px solid #DADADA;
+	border-right:2px solid #737373;
+	border-bottom:2px solid #737373;
+}
+
+.gridtb td {
+	 line-height:20px;
+	 height:20px;font-weight:normal;
+	 color:#003366;background-color:#FFFFFF;letter-spacing:1px;}
+.gridtb a {text-decoration: none;}
+.gridtb a:link {color:#0000CC; text-decoration: underline;}
+.gridtb a:visited {color:#0000CC; text-decoration: underline;}
+.gridtb a:hover {color:#CC3300; text-decoration: underline;}
+.gridtb input{ letter-spacing:1px; padding:2px 2px 0 2px;}
+
+/*必填欄位*/
+.gridtb .reqfield {color:#FF0000 }
+
+.gridtb .nc {font-size:10px; }
+/* =============== gridtb end ================= */
+
+
+/* =============== detailtb start ================= */      
+.dtltb {background-color:#FFFFFF; font-size:15px;}
+.dtltb caption{height:30px; padding:10px 0 0 0;color:#FF0000;}
+.dtltb th {
+    background-color:#6699FF; color:#000000; border:0 ;padding:5px; font-size:15px;
+	border-left:2px solid #DADADA;
+	border-top:2px solid #DADADA;
+	border-right:2px solid #737373;
+	border-bottom:2px solid #737373;
+}
+.dtltb td {
+   background-color:#FFFFFF; color:#000000; border:0 ;padding:5px; font-size:15px;
+   border-left:1px solid #DADADA;
+   border-top:1px solid #DADADA;
+   border-right:1px solid #DADADA;
+   border-bottom:1px solid #DADADA;
+}
+.dtltb a {text-decoration: none;}
+.dtltb a:link {color:#0000CC; text-decoration: underline;}
+.dtltb a:visited {color:#0000CC; text-decoration: underline;}
+.dtltb a:hover {color:#CC3300; text-decoration: underline;}
+.dtltb th.title { background-color:#cce6ff; color:#000000; text-align: center; vertical-align: middle;}
+.dtltb input{ letter-spacing:1px;}
+
+/*必填欄位*/
+.dtltb .reqfield {color:#FF0000 }
+ 
+/*區塊區別*/
+.dtltb .block1-title{background-color:#FF99CC; color:#000}
+.dtltb .block1-field{background-color:#FF99FF; color:#000}
+
+.dtltb .block2-title{background-color:#FFCC00; color:#000}
+.dtltb .block2-field{background-color:#FFCC66; color:#000}
+
+.dtltb .block3-title{background-color:#99CC33; color:#000}
+.dtltb .block3-field{background-color:#99CC66; color:#000}
+
+.relogin{font-size:16px;color:#990000;}
+.relogin2{font-size:12px;color:#000066;}
+
+/*20080117*/
+.dtltb .mutlisttoolbar td { padding:0; margin:0;height:19px}
+.dtltb .mutlist{ width:150px;height:120px;}
+/* =============== detailtb end  ================= */
+
+
+
+.noBorderDtltb {background-color:#FFFFFF; font-size:15px;}
+.noBorderDtltb caption{height:30px; padding:10px 0 0 0;color:#FF0000;}
+.noBorderDtltb th {
+    background-color:#6699FF; color:#000000; border:0 ;padding:5px; font-size:15px;
+	border-left:2px solid #DADADA;
+	border-top:2px solid #DADADA;
+	border-right:2px solid #737373;
+	border-bottom:2px solid #737373;
+}
+.noBorderDtltb td {
+   background-color:#FFFFFF; color:#000000; border:0 ;padding:5px; font-size:15px;
+   border-left:0px solid #DADADA;
+   border-top:0px solid #DADADA;
+   border-right:0px solid #DADADA;
+   border-bottom:0px solid #DADADA;
+}
+
+
+
+.reqfield {color:#FF0000 }
+.blueWord {color:#0000FF }
+.wordBreak {white-space:normal; word-break:break-all;}
+.errors{color:#FF0000;font-size:20px; }

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+    <!-- 報名系統線上申請 -->
+    <package namespace="/onlineapply" name="onlineapply" extends="struts-authorization, json-default">
+            
+        <result-types>
+            <result-type name="streamx" class="com.sunspoter.lib.web.struts2.dispatcher.StreamResultX"/>
+        </result-types>
+        
+        <default-interceptor-ref name="authorizationStack" />
+        
+        <global-results>
+            <result name="initPage" type="redirectAction">
+                <param name="namespace">/onlineapply</param>
+                <param name="actionName">init</param>
+            </result> 
+        </global-results>
+
+        <global-exception-mappings>
+            <exception-mapping result="error" exception="java.lang.Exception"></exception-mapping>
+        </global-exception-mappings>
+        
+        <action name="init2" class="org.cic.template.web.onlineapply.OnlineApplyAction" method="init">
+            <result name="success">/WEB-INF/jsp/onlineapply/onlineapply_index.jsp</result>
+        </action>
+        
+        <action name="init" class="org.cic.template.web.onlineapply.OnlineApplyAction" method="init">
+            <result name="success">/WEB-INF/jsp/onlineapply/onlineapply_main.jsp</result>
+        </action>
+  
+        <action name="query" class="org.cic.template.web.onlineapply.OnlineApplyAction" method="query">
+            <result name="success">/WEB-INF/jsp/onlineapply/onlineapply_main.jsp</result>
+        </action>
+        
+        <action name="initModifyPage" class="org.cic.template.web.onlineapply.OnlineApplyAction" method="initModifyPage">
+            <result name="success">/WEB-INF/jsp/onlineapply/onlineapply_detail.jsp</result>
+        </action>
+        
+        <action name="doModify" class="org.cic.template.web.onlineapply.OnlineApplyAction" method="doModify">
+            <result type="json">
+                <param name="root">jsonResultMap</param>
+            </result>
+        </action>
+        
+      
+    </package>
+
+</struts>

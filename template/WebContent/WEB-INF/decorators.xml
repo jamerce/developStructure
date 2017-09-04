@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<decorators defaultdir="/WEB-INF/decorators">
+    <excludes>
+        <pattern>/pages/error.jsp</pattern>
+    </excludes>
+
+  
+    <decorator name="main" page="main_decorator.jsp">
+        <pattern>/onlineapply/*</pattern>
+    </decorator>
+
+    <decorator name="home" page="home_decorator.jsp">
+        <pattern>/home/*</pattern>
+    </decorator>
+    
+    <decorator name="other" page="other_decorator.jsp">
+        <pattern>/*</pattern>
+    </decorator>
+  
+    <decorator name="printable" page="printable_decorator.jsp"/>
+    
+    <decorator name="exception" page="exception_decorator.jsp">
+        <pattern>*/pages/*</pattern>
+        <pattern>*/exceptionHandle/*</pattern>
+    </decorator>
+    
+    <decorator name="none" page="none_decorator.jsp">
+        <pattern>/index.jsp</pattern>
+        <pattern>/index.html</pattern>
+        <pattern>/login/*</pattern>
+    </decorator>
+    
+</decorators>

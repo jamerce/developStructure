@@ -1,0 +1,29 @@
+@CHARSET "UTF-8";
+
+.expand a:link, .expand a:visited {
+  border:1px dotted #ccc;
+  border-width:0;
+  text-decoration:none;
+  color:blue
+}
+.expand a:hover, .expand a:active, .expand a:focus {
+  border-style:solid;
+  background-color:#f0f0f0;
+  text-decoration:underline;
+  outline:0 none
+}
+
+.expand a {
+  display:block;
+  padding:3px 10px
+}
+.expand a:link, .expand a:visited {
+  border-width:1px;
+  background-image:url(arrow-down.gif);
+  background-repeat:no-repeat;
+  background-position:98% 50%;
+}
+.expand a.open:link, .expand a.open:visited {
+  border-style:solid;
+  background:#eee url(arrow-up.gif) no-repeat 98% 50%
+}

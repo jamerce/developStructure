@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC
+ "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+ "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+	<!-- <classPathEntry location="C:\/Users/kait/.m2/repository/com/oracle/ojdbc6/ojdbc6.jar" /> -->
+	<classPathEntry location="C:\/Users/kait/.m2/repository/com/microsoft/sqlserver/sqljdbc4/4.0/sqljdbc4-4.0.jar" />
+
+	<context id="ConditionalJava5" targetRuntime="MyBatis3" defaultModelType="conditional">
+        
+        <!-- mySql 的分頁功能 -->
+        <!-- <plugin type="com.mybatis.plugins.MySQLLimitPlugin"></plugin> -->
+        <!-- <plugin type="com.mybatis.plugins.SqlServerOffsetPlugin"></plugin> -->
+    
+        <plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin" />
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+        <plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">
+            <property name="searchString" value="Example$" />
+            <property name="replaceString" value="Criteria" />
+        </plugin>
+		
+		<!-- <commentGenerator>
+            <property name="suppressAllComments" value="true" />
+    	</commentGenerator> 
+    	-->
+            
+        <jdbcConnection driverClass="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+            connectionURL="jdbc:sqlserver://www.pflag.com.tw;DatabaseName=TFTIS" 
+            userId="sa"
+            password="abc.123.123" />
+        
+        <!-- <javaTypeResolver>  
+            <property name="forceBigDecimals" value="false" />  
+        </javaTypeResolver> -->
+        
+        
+		<javaModelGenerator targetPackage="org.cic.template.persistent.mybatis.tftis.model"
+			targetProject="template">
+			<property name="enableSubPackages" value="true" />
+			<!-- <property name="trimStrings" value="true" /> -->
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetPackage="org.cic.template.persistent.mybatis.tftis.mapper"
+			targetProject="template">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="org.cic.template.persistent.mybatis.tftis.mapper" 
+			targetProject="template">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+		<!-- <table tableName="template_REG_MAIN">  
+        	<columnOverride column="TR_COST" javaType="Integer"></columnOverride>   
+        	<columnOverride column="TR_DEPT_NAME" javaType="String"></columnOverride>
+        	<columnOverride column="TR_SCHOOL_COMP_NAME" javaType="String"></columnOverride>            
+            <columnOverride column="TR_PROF_NAME" javaType="String"></columnOverride>
+            <columnOverride column="TR_MCNAME" javaType="String"></columnOverride>
+            <columnOverride column="TR_ADDR" javaType="String"></columnOverride>
+        </table> -->
+        
+        <table tableName="NOVIOLATION_STATUS_LOG" >                
+            <generatedKey column="id" identity="true"  sqlStatement="JDBC"  />   
+        </table>
+        
+	</context>
+
+</generatorConfiguration>

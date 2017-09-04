@@ -1,0 +1,29 @@
+﻿<!-- 若使用Eclipse啟動Tomcat者，可將Context設定(Ex.DB pool)置於此處 -->
+<Context path="/ms" docBase="ms"  reloadable="true"   crossContext="true">
+    <Logger className="org.apache.catalina.logger.FileLogger"
+            prefix="localhost_ms_log."   suffix=".txt"
+            timestamp="true"/>
+             
+	<Resource
+	          name="jdbc/tftis"
+	          auth="Container"
+	          type="javax.sql.DataSource"
+	          factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"
+	          maxTotal="100"
+	          maxWaitMillis="10000"
+	          maxIdle="30"
+	          username="sa"
+	          password="abc.123.123"
+	          driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+	          url="jdbc:sqlserver://www.pflag.com.tw;DatabaseName=TFTIS"
+	          validationQuery="SELECT 1"
+	          testOnBorrow="true"
+	          removeAbandonedOnBorrow="true"
+	          removeAbandonedOnMaintenance="true"
+	          removeAbandonedTimeout="600"
+	          logAbandoned="true"
+	/>  
+</Context>
+
+
+ 
